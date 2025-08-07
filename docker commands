@@ -1,0 +1,34 @@
+Install Docker GUI (Docker Desktop)
+
+http://docker.com/products/docker-desktop/
+
+
+docker commands
+===============	
+| **Command**                                    | **Description**                                                                            |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `docker ps -a`                                 | Lists **all containers**, including those that have stopped.                               |
+| `docker build -t learnNestConcept .`           | Builds an image from the current directory with the tag `learnNestConcept`.                |
+| `docker images`                                | Lists all Docker images on your system.                                                    |
+| `docker stop 7a43c32b49bf`                     | Stops the container with ID `7a43c32b49bf`.                                                |
+| `docker run -p 3000:3000 a93788ee230d`         | Runs a container from image `a93788ee230d`, mapping host port 3000 to container port 3000. |
+| `docker rm f9bb1f425b3e 6fedb61beaaf ...`      | Removes multiple **stopped** containers by their container IDs.                            |
+| `docker rmi a93788ee230d`                      | Removes the image with ID `a93788ee230d`. Only works if no containers are using it.        |
+| `docker login`                                 | Logs in to Docker Hub (you'll be prompted for username and password).                      |
+| `docker logout`                                | Logs out from Docker Hub.                                                                  |
+| `docker pull aravindbalaji28/learnnest:latest` | Pulls the image `learnnest:latest` from the Docker Hub user `aravindbalaji28`.             |
+  for /f %i in ('docker ps -aq') do docker rm -f %i  docker all container delete single command 
+   docker-compose up -d                            run everything 
+   docker-compose down                             stop everything  
+    
+
+mongodb connect
+----------------------------------
+mongodb connect
+1.database connect terminal = docker exec -it todo-app-backend-mongo-1 mongosh -u mongoadmin -p secret --authenticationDatabase admin.
+2.database connect mongodb compass = mongodb://mongoadmin:secret@localhost:27018/todo_app?authSource=admin.
+
+
+
+    
+
